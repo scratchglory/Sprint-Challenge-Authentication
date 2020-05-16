@@ -21,3 +21,17 @@
      - available for when user is logged in
 7. fill out auth-router.js
 8. test connectivity with insomnia
+
+### Writing Tests
+
+1. npm install --save-dev jest
+2. set up config, "jest", in package.json
+3. npm install --save-dev supertest
+4. creae seed folder
+   - knex seed:make 001-users
+   - knex seed:run
+5. create **tests** folder
+   - tests.js
+6. add test scripts in package.json
+   - "test:watch": "jest --watch"
+   - "test": "jest"
