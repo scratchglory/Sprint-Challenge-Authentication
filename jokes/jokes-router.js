@@ -10,10 +10,10 @@ router.get("/", (req, res) => {
   axios
     .get("https://icanhazdadjoke.com/search", requestOptions)
     .then((response) => {
+      console.log("AXIOS CALL", response.data.results);
       res.status(200).json(response.data.results);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json({ message: "Error Fetching Jokes", error: err });
     });
 });

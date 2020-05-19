@@ -35,3 +35,6 @@
 6. add test scripts in package.json
    - "test:watch": "jest --watch"
    - "test": "jest"
+7. struggling to get test for axios end points
+8. create **mocks** folder: for all our mock tests
+   - axios.js

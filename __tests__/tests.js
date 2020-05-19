@@ -1,3 +1,4 @@
+const axios = require("axios");
 // test dummy
 test("dum bum", () => {
   expect(1 + 1).toBe(2);
@@ -65,17 +66,19 @@ describe("Get /api/auth/", () => {
   });
 });
 
-// describe("Get /api/jokes/", () => {
-//   it("gets jokes", async () => {
-//     const res = await supertest(server).get("/api/jokes");
+describe("Get /api/jokes/", () => {
+  it("gets jokes", async () => {
+    const res = await supertest(server).get("/api/jokes");
 
-//     expect(res.statusCode).toBe(200);
-//   });
-// });
-
-test("GET /api/jokes", async () => {
-  const res = await supertest(server).get("/api/jokes");
-  jest.spyOn(axios, "get");
-  jest.spyOn(console, "log");
-  expect(console.log).toHaveBeenCalledWith(expect.any(Error));
+    expect(res.statusCode).toBe(200);
+    expect(res.type).toBe("application/json");
+  });
 });
+
+// test("GET /api/jokes", async () => {
+//   const res = await supertest(server).get("/api/jokes");
+//   jest.spyOn(axios, "get");
+//   jest.spyOn(console, "log");
+//   expect(console.log).toHaveBeenCalledWith(expect.any(Error));
+//   expect(res.statusCode).toBe(500);
+// });
