@@ -75,10 +75,10 @@ describe("Get /api/jokes/", () => {
   });
 });
 
-// test("GET /api/jokes", async () => {
-//   const res = await supertest(server).get("/api/jokes");
-//   jest.spyOn(axios, "get");
-//   jest.spyOn(console, "log");
-//   expect(console.log).toHaveBeenCalledWith(expect.any(Error));
-//   expect(res.statusCode).toBe(500);
+// describe("Testing integration on jokes", () => {
+//   test("testing getting jokes", async () => {
+//     const res = await supertest(server).get("/api/jokes");
+//     expect(res.statusCode).toBe(200);
+//     expect(res.type).toBe("application/json");
+//   });
 // });
